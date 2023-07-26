@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --ff-primary: "Roboto", sans-serif;
+  --bg-body: #000000;
+  --hue: 195;
+  --table-color: hsla(var(--hue), 89%, 14%, 1);
+  --table-bg-color: hsla(var(--hue), 61%, 6%, 0.5);
+  --btn-bg-color: hsla(var(--hue), 91%, 25%, 1);
+  --table-border-color: hsla(191, 31%, 42%, 1);
+  --text-color: hsla(240, 9%, 89%, 1);
+  --inp-bg-color: hsla(191, 65%, 7%, 1);
+  --btn-text-color: hsla(355, 91%, 66%, 1);
+}
+
+body {
+  background: var(--bg-body);
+  font-size: 1.6rem;
+  color: var(--text-color);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 0.1rem;
+  height: 0.1rem;
+  padding: 0;
+  margin: -0.1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 110rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 9rem 0;
+}
+
+.search {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.search input {
+  width: 32rem;
+  padding: 1rem;
+  background: var(--inp-bg-color);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  height: 4.8rem;
+}
+
+.search button {
+  background: var(--btn-bg-color);
+  color: var(--text-color);
+  padding: 1rem;
+  height: 4.8rem;
+  border-radius: 0.5rem;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.search button:hover {
+  background: #fff;
+  color: var(--btn-bg-color);
+}
+/*  todo - ver sobre hover no svg de estrela */
+.search svg path:hover {
+  fill: var(--btn-bg-color);
+}
+/* todo - ver pq a borda nao esta aparecendo */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: .5rem;
+  border: 1px solid var(--table-border-color);
+  overflow: hidden;
+}
+
+table * {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+table th {
+  background: var(--table-color);
+  text-align: left;
+  font-weight: 700;
+  padding: 2.4rem;
+}
+
+table th:first-child {
+  border-top-left-radius: 0.6rem;
+}
+
+table th:last-child {
+  border-top-right-radius: 0.6rem;
+}
+
+table tr {
+  background: var(--table-bg-color);
+}
+
+table tr:nth-child(even) {
+  background: var(--inp-bg-color);
+}
+
+table td {
+  padding: 2.4rem;
+  text-align: left;
+}
+
+td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+td.user img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+td.user a {
+  text-decoration: none;
+}
+td.user a p {
+  font-weight: bold;
+}
+
+td .remove {
+  background: transparent;
+  border: none;
+  color: var(--btn-text-color);
+  font-weight: bold;
+}
