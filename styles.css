@@ -91,13 +91,12 @@ header {
 .search svg path:hover {
   fill: var(--btn-bg-color);
 }
-/* todo - ver pq a borda nao esta aparecendo */
+
 table {
   width: 100%;
   border-collapse: collapse;
-  border-radius: .5rem;
-  border: 1px solid var(--table-border-color);
-  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 1px var(--table-border-color);
 }
 
 table * {
@@ -112,16 +111,9 @@ table th {
   padding: 2.4rem;
 }
 
-table th:first-child {
-  border-top-left-radius: 0.6rem;
-}
-
-table th:last-child {
-  border-top-right-radius: 0.6rem;
-}
-
 table tr {
   background: var(--table-bg-color);
+  border-bottom: 1px solid var(--table-border-color);
 }
 
 table tr:nth-child(even) {
@@ -149,8 +141,14 @@ td.user img {
 td.user a {
   text-decoration: none;
 }
+
 td.user a p {
   font-weight: bold;
+}
+
+td.user a span {
+  font-size: 1.6rem;
+  font-weight: 400;
 }
 
 td .remove {
@@ -158,4 +156,29 @@ td .remove {
   border: none;
   color: var(--btn-text-color);
   font-weight: bold;
+  cursor: pointer;
+}
+
+.no-favorites {
+  background: var(--table-bg-color);
+  display: flex;
+  gap: 6rem;
+  justify-content: center;
+  height: 62rem;
+  align-items: center;
+}
+
+.no-favorites img {
+  width: 13rem;
+  height: 12rem;
+}
+
+.no-favorites span {
+  color: hsla(189, 4%, 32%, 1);
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hide {
+  display: none;
 }
